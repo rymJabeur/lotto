@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+
+<f:loadBundle basename="messages" var="msg" />
+
+<head>
+<title>#{msg.appliTitre}</title>
+<link rel="stylesheet" type="text/css" href="css/lotto.css" />
+
+</head>
+<body>
+	<h:form id="lottoForm">
+		<div class="outer-div ">
+			<h1>#{msg.bienvenueMessage}</h1>
+			<h:outputText value="#{msg.jouerMessage}" />
+			<h:message for="lottoForm" id="messageInfoId" errorStyle="color: red"
+				infoStyle="color: green" />
+
+
+			<div class="result-class" id="resultatId">
+				<h:outputText value="#{lottoController.resultatLotto.firstTirage}"
+					class="green-list" />
+				<h:outputText value=" #{lottoController.resultatLotto.secondTirage}"
+					class="green-list" />
+				<h:outputText value=" #{lottoController.resultatLotto.thirdTirage}"
+					class="red-list" />
+			</div>
+
+			<div class="inner-div">
+				<h:form id="formId" prependId="false">
+					<h:commandButton value="#{msg.jouerAuLotto}"
+						action="#{lottoController.jouerAuLottoAction}"
+						class="button-class" />
+				</h:form>
+			</div>
+
+		</div>
+	</h:form>
+</body>
+</html>

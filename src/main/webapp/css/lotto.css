@@ -1,0 +1,39 @@
+.outer-div {
+	padding: 150px;
+	text-align: center;
+}
+
+.inner-div {
+	margin: 0 auto;
+	width: 500px;
+	text-align: center;
+	Font-Weight: Bold;
+	margin-botton: 4cm;
+}
+
+
+.result-class {
+	text-align: center;
+	position: center;
+	margin-top: 2cm;
+	font-size: 35px;
+}
+
+.green-list {
+	color: green;
+	Font-Weight: Bold;
+}
+
+.red-list {
+	color: red;
+	Font-Weight: Bold;
+}
+
+.button-class {
+	background-color: #77B5FE;
+	color: white;
+	Font-Weight: Bold;
+	width: 150px;
+	height: 30px;
+	margin-top: 2cm;
+}
